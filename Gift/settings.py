@@ -36,6 +36,7 @@ PAYPAL_RECEIVER_EMAIL = '<huresumal@gmail.com>'
 INSTALLED_APPS = [
     'customer',
     'paypal_store',
+    'products',
     'paypal.standard.ipn',
     'django.contrib.admin',
     'django.contrib.auth',
