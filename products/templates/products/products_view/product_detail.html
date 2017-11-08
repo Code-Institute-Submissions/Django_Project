@@ -1,0 +1,18 @@
+{% extends "products/base.html" %}
+{% load static %}
+
+{% block litle %}
+    {{ product.name }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+       <div class="product_detail">
+           <h1>{{ product.name }}</h1>
+           <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>>
+           <img src="/media/{{ product.image}}" style="height:150px;width:100px;">
+           <p class="price">{{ product.price }}</p>
+           <p class="description">{{ product.description }}</p>
+       </div>
+    </div>
+{% endblock %}
