@@ -6,17 +6,17 @@
 
     <div class="container" id="product_detail">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12" style="box-sizing: border-box; border: solid 1px gray;">
                  <h1>{{ product.name }}</h1>
                  <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
                 <hr>
                  <img src="/media/{{ product.image}}" style="height:150px;width:100px;">
             </div>
-            <div class="col-md-6">
+
                 <b> Price:${{ product.price }}<br>
                <a class="card-text" href="{{ product.get_absolute_url }}">Product Description:{{ product.description}}</a><br>
                 <button>Back</button>
-            </div>
+
        </div>
     </div>
 

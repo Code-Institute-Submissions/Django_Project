@@ -28,7 +28,7 @@
     <h1> {% if category %} {{ category.name }} {% else %} Products {% endif %}</h1>
         <hr>
        {% for product in products %}
-          <div class="card col-sm-6"  >
+          <div class="card col-sm-6" style="box-sizing: border-box; border: solid 1px gray;" >
               <div class="card-body">
               <h4 class="card-title"> <a href="{{ product.get_absolute_url }}"><b> {{ product.name }}</b> </a></h4>
               <a href="{{ product.get_absolute_url }}" class="story-img">
