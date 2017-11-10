@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'paypal.standard.ipn',
+    'paypal_store',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +126,9 @@ STARICFILES_DIRS = (os.path.join(BASE_DIR,"static") )
 # Media for saving images of our project
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Paypal settings goes here
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'huresumal-facilitator@gmail.com'
+PAYPAL_TEST = True

@@ -26,21 +26,26 @@
 
 
     <h1> {% if category %} {{ category.name }} {% else %} Products {% endif %}</h1>
-
+        <hr>
        {% for product in products %}
-          <div class="col-sm-6">
-              <a href="{{ product.get_absolute_url }}">
+          <div class="card col-sm-6"  >
+              <div class="card-body">
+              <h4 class="card-title"> <a href="{{ product.get_absolute_url }}"><b> {{ product.name }}</b> </a></h4>
+              <a href="{{ product.get_absolute_url }}" class="story-img">
                  {% if product.image %}
 
-                     <img src="/media/{{ product.image}}"  class="img-thumbnail" style="height:200px;width:300px;">
+                     <img src="/media/{{ product.image}}"  class="card-img-top"style="height:200px;width:300px;">
 
                   {% endif %}
               <br>
               </a>
-              <a href="{{ product.get_absolute_url }}"><b> {{ product.name }}</b>
-              </a><br>
-             <b> ${{ product.price }}<b><br>
-               <a href="{{ product.get_absolute_url }}">{{ product.description }}</a>
+              <br>
+             <b> Price:${{ product.price }}<br>
+               <a class="card-text" href="{{ product.get_absolute_url }}">Description:{{ product.description|truncatewords:30 }}</a><br>
+                 <a href="{{ product.paypal_form.sandbox }}"></a><br>
+                 <button class="btn-default"><a href="{% url 'products:product_detail' product.id product.slug%}">
+                     More About Product</a></button>
+             </div>
           </div>
        {% endfor %}
 

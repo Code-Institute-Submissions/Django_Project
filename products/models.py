@@ -1,5 +1,9 @@
-from django.db import models
 from django.core.urlresolvers import reverse
+import uuid
+from django.db import models
+from django.conf import settings
+from paypal.standard.forms import PayPalPaymentsForm
+
 
 class Category(models.Model):
     name = models.CharField(max_length=250, db_index=True)
@@ -33,12 +37,27 @@ class Product(models.Model):
         ordering = ('-created',)
         index_together = (('id','slug'),)
 
+    @property
+    def paypal_form(self):
+        paypal_dict = {
+            "business": settings.PAYPAL_RECEIVER_EMAIL,
+            "amount": self.price,
+            "currency": "USD",
+            "item_name": self.name,
+            "invoice": "%s-%s" % (self.pk, uuid.uuid4()),
+            "notify_url": settings.PAYPAL_NOTIFY_URL,
+            "return_url": "%s/paypal-return" % settings.SITE_URL,
+            "cancel_return": "%s/paypal-cancel" % settings.SITE_URL
+        }
+
+        return PayPalPaymentsForm(initial=paypal_dict)
+
+
     def __str__(self):
          return self.name
 
     def get_absolute_url(self):
          return reverse('products:product_detail', args=[self.id, self.slug])
-
 
 
 
