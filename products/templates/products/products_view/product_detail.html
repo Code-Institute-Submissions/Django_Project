@@ -1,24 +1,28 @@
 
 {% extends "products/base.html" %}
-{% load static %}
 
 {% block content %}
 
-    <div class="container" id="product_detail">
+    <div class="container" >
         <div class="row">
-            <div class="col-md-12" style="box-sizing: border-box; border: solid 1px gray;">
-                 <h1>{{ product.name }}</h1>
-                 <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+            <div class="col-md-12 col-sm-12" >
+                <div class="panel panel-default" id="product_detail">
+                    <div class="panel-body">
+                 <h2>{{ product.name }}</h2>
+                 <h3><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h3>
                 <hr>
-                 <img src="/media/{{ product.image}}" style="height:150px;width:100px;">
-            </div>
+                 <img src="/media/{{ product.image}}"><br>
+                        <a href="{{ product.get_absolute_url }}"><b>Product Description:</b>{{ product.description}}</a><br>
+                    <h4> Price:${{ product.price }}</h4>
+                    {{ product.paypal_form.sandbox }}
+                    <br>
+                        <button id="back_button"> <a href="#">Back</a></button>
+                    </div>
 
-                <b> Price:${{ product.price }}<br>
-               <a class="card-text" href="{{ product.get_absolute_url }}">Product Description:{{ product.description}}</a><br>
-                <button>Back</button>
+                </div>
+             </div>
 
        </div>
     </div>
-
 
 {% endblock %}

@@ -31,15 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'products',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'products',
     'paypal.standard.ipn',
     'paypal_store',
+    'django_forms_bootstrap',
+    'user_account',
+
 ]
 
 MIDDLEWARE = [
@@ -121,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STARICFILES_DIRS = (os.path.join(BASE_DIR,"static") )
+STARICFILES_DIRS = (os.path.join(BASE_DIR, 'products/static'))
 
 # Media for saving images of our project
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -132,3 +135,11 @@ SITE_URL = 'http://127.0.0.1:8000'
 PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'huresumal-facilitator@gmail.com'
 PAYPAL_TEST = True
+
+# Auth user
+AUTH_USER_MODEL = 'user_account.User'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'user_account.backends.EmailAuth',
+)

@@ -1,55 +1,57 @@
+
 {% extends "products/base.html" %}
-{% load static %}
 
 {% block content %}
-<div class="container">
+<div class="container" id="product_body">
     <div class="row">
-             <div class="col-sm-3" id="product_sidebar">
-              {% block litle %}
-                  {% if category %} {{ category.name }} {% else %}
-                   {% endif %}
-                {% endblock %}
-
-
-                  <h3>Categories</h3>
+             <div class="col-sm-3" id="product_sidebar"> <!--Start Product sidebar-->
+                  {% block litle %}
+                       {% if category %} {{ category.name }} {% else %}
+                       {% endif %}
+                  {% endblock %}
+                 <h2>Categories</h2>
                       <ul>
                           <li {% if not category %} class="selected" {% endif %} >
                                 <a href="{% url "products:product_list" %}">All</a>
                           </li>
-                          {% for c in categories %}
-                              <li {% if category.slug == c.slug %} class="selected" {% endif %}>
+                              {% for c in categories %}
+                           <li {% if category.slug == c.slug %} class="selected" {% endif %}>
                                  <a href="{{c.get_absolute_url}}">{{ c.name }}</a>
-                               </li>
-                          {% endfor %}
-            </div>
-    <div class="col-sm-9" id="product_list">
+                           </li>
+                               {% endfor %}
+                      </ul>
+             </div>  <!--End Product sidebar-->
 
-
-    <h1> {% if category %} {{ category.name }} {% else %} Products {% endif %}</h1>
-        <hr>
+    <div class="col-sm-9" > <!--Start Product -->
+          <h2> {% if category %} {{ category.name }} {% else %} Products {% endif %}</h2>
+          <hr>
        {% for product in products %}
-          <div class="card col-sm-6" style="box-sizing: border-box; border: solid 1px gray;" >
-              <div class="card-body">
-              <h4 class="card-title"> <a href="{{ product.get_absolute_url }}"><b> {{ product.name }}</b> </a></h4>
-              <a href="{{ product.get_absolute_url }}" class="story-img">
-                 {% if product.image %}
-
-                     <img src="/media/{{ product.image}}"  class="card-img-top"style="height:200px;width:300px;">
-
-                  {% endif %}
-              <br>
-              </a>
-              <br>
-             <b> Price:${{ product.price }}<br>
-               <a class="card-text" href="{{ product.get_absolute_url }}">Description:{{ product.description|truncatewords:30 }}</a><br>
-                 <a href="{{ product.paypal_form.sandbox }}"></a><br>
-                 <button class="btn-default"><a href="{% url 'products:product_detail' product.id product.slug%}">
-                     More About Product</a></button>
-             </div>
-          </div>
+          <div class="panel panel-default" id="product_list"> <!--Start Product list-->
+            <div class="row"> <!--Start Product row -->
+                     <div class="col-sm-4 "> <!-- Start Product Title & image-->
+                         <h4 class="panel-title"> <a href="{{ product.get_absolute_url }}"><b> {{ product.name }}</b> </a></h4>
+                           <a href="{{ product.get_absolute_url }}">
+                              {% if product.image %}
+                               <img src="/media/{{ product.image}}"  class="thumbnail product_img">
+                             {% endif %}
+                           </a>
+                           <h5> Price:${{ product.price }}</h5>
+                     </div> <!--End Product Title & image-->
+                     <div class="col-sm-8" id="product_description"> <!--Start Product Description -->
+                          <a class="card-text" href="{{ product.get_absolute_url }}">
+                              <h4>Product Description</h4>
+                              {{ product.description|truncatewords:30 }}</a><br>
+                           <button id="product_button">
+                               <a href="{% url 'products:product_detail' product.id product.slug%}" >
+                               More About Product</a>
+                           </button>
+                     </div> <!--End Product Description -->
+               </div>  <!--End Product row -->
+          </div> <!--End Product list-->
        {% endfor %}
 
-    </div>
-        </div>
-        </div>
+    </div> <!--End Product -->
+    </div> <!--End main row-->
+</div> <!--End Main container-->
+
 {% endblock %}

@@ -1,0 +1,125 @@
+/*
+*  footer
+*/
+#footer_color{background-color: darkgray;}
+
+/*
+*  full body design
+*/
+body{color:black;
+     font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+     font-size: 16px;  }
+.right{float:right;}
+.left{float:left;}
+/*
+* Product List page
+*/
+#product_body{
+    color: #317eac;
+    background-color: #e6f9ff;
+    margin-top: -20px;
+}
+#product_sidebar{
+     font-size: 16px;
+}
+#product_sidebar h3{
+         color: #317eac;
+}
+#product_sidebar ul{
+    list-style: none;
+}
+#product_sidebar li{
+     font-size: 16px;
+}
+#product_sidebar a{
+    text-decoration: none;
+    color: #317eac;
+}
+#product_sidebar a:hover{
+    color: #007bff;
+}
+#product_list{
+    background-color: lightgray;
+    border: 2px solid lightslategray;
+    padding: 10px;
+}
+#product_list h4,h5{
+    color: #317eac;
+    padding: 10px 0px;
+    text-align: center;
+}
+#product_description h4{
+    color: #317eac;
+
+    text-align: left;
+}
+#product_description a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #317eac;
+    text-align: left;
+}
+#product_button{
+    border-radius: 10px;
+    background-color: #317eac;
+     margin-top: 20px;
+}
+#product_button a{
+    font-size: 16px;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    background-color: #317eac;
+
+}
+.product_img{
+    height:150px;width:250px;
+    border: 2px solid dimgray;
+}
+/*
+* Product Detail
+*/
+#product_detail{
+   background-color: lightgray;
+    text-align: center;
+}
+#product_detail h2,h3{
+    color: #317eac;
+}
+#product_detail h4{
+    color: #317eac;
+    margin-bottom: 10px;
+}
+
+#product_detail a{
+    color: #317eac;
+    text-decoration: none;
+    margin: 20px 0px 0px 0px;
+}
+#product_detail img{
+    height:150px;width:250px;
+    border: 2px solid dimgray;
+    margin-bottom: 20px;
+}
+#back_button{
+    border-radius: 10px;
+    background-color: #317eac;
+    width:100px;
+    padding: 10px;
+}
+#back_button a{
+    font-size: 16px;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    background-color: #317eac;
+
+}
+
+/*
+* Nav design
+*/
+#main_nav{
+    background-color: #b300b3;
+}
+
