@@ -26,8 +26,11 @@
             <div class="collapse navbar-collapse" id="topNavbar">
                 <ul class="nav navbar-nav navbar-right ">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Choose Your Gift</a></li>
-                    <li><a href="{% url 'register' %}">User Register</a></li>
+                    <li><a href="{% url 'products:product_list' %}">Choose Your Gift</a></li>
+                    <li><a href="{% url 'user_account:register' %}">New User</a></li>
+                    <li><a href="{% url 'user_account:login' %}">User LogIn</a></li>
+                    <li><a href="{% url 'user_account:logout' %}">LogOut</a></li>
+
                     <li><a href="#">Contact Us</a></li>
                 </ul>
 

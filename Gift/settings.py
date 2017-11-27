@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
     'paypal_store',
     'django_forms_bootstrap',
-    'user_account',
+
 
 ]
 
@@ -138,8 +138,7 @@ PAYPAL_TEST = True
 
 # Auth user
 AUTH_USER_MODEL = 'user_account.User'
-
 AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
+   'django.contrib.auth.backends.ModelBackend',
     'user_account.backends.EmailAuth',
 )

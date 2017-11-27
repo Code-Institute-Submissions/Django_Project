@@ -25,9 +25,5 @@ class AccountUserManager(UserManager):
 
 
 class User(AbstractUser):
-    # now that we've abstracted this class we can add any
-    # number of custom attribute to our user class
-
-    # in later units we'll be adding things like payment details!
 
     objects = AccountUserManager()
