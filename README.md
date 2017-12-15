@@ -26,6 +26,12 @@ Now using django-admin we create our Gift project.
 ```
 django-admin startproject Gift
 ```
+Then we got those file in Gift project:
+* __manage.py__: Perfoms admin tasks for our project, such as putting it on the system path, or starting the built-in webserver.
+* __settings.py__: This is the settings file for your project, where you define your project’s configuration settings, including database connections, other applications, templates, and more.
+* __urls.py__: The url declarations for this Django project. This file contains a list of mappings which connect urls to views.
+* __wsgi.py__: An entry-point for WSGI-compatible web servers to serve our project. This file handles our requests/responses to/from Django development server.
+* ____init__ __.py__: An empty file that informs Python that this directory should be considered a Python package.
 
    
 
