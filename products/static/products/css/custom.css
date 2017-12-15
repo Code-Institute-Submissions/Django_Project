@@ -1,7 +1,28 @@
 /*
 *  footer
 */
-#footer_color{background-color: darkgray;}
+#footer_color{background-color: gray;}
+#footer_icon ul{list-style-type:none;
+               }
+#footer_icon ul li{float: left;
+            margin:10px 10px 0px 20px;}
+#footer_icon ul li a {
+    text-decoration: none;
+}
+
+#footer_text{
+    text-align: center;
+     color: white;
+    font-size: 16px;
+    padding: 10px 0px;
+}
+#facebook{
+    color:#0056b3;
+}
+#twitter {color:#317eac;}
+#google{color:darkred;}
+#instagram{color: #b300b3;}
+
 
 /*
 *  full body design
@@ -11,6 +32,64 @@ body{color:black;
      font-size: 16px;  }
 .right{float:right;}
 .left{float:left;}
+/*
+* register page
+*/
+#registe_form{
+    background-color: #e6f9ff;
+    height:500px;
+     color: #317eac;
+    font-size: 16px;
+    margin-top:-20px;
+}
+#registe_form legend{
+    color: #317eac;
+    font-weight: bold;
+    font-size: 22px;
+    padding:20px 0px;
+}
+#register_button{
+    border-radius: 10px;
+     margin-top: 10px;
+    background-color: #317eac;
+}
+#register_button a{
+    font-size: 16px;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+}
+/*
+* login page
+*/
+#login_form{
+    background-color: #e6f9ff;
+    height:500px;
+     color: #317eac;
+    font-size: 16px;
+    margin-top:-20px;
+}
+#login_form legend{
+    color: #317eac;
+    font-weight: bold;
+    font-size: 22px;
+    padding:20px 0px;
+}
+#login_button{
+    border-radius: 10px;
+     margin-top: 10px;
+    background-color: #317eac;
+}
+#login_button a{
+    font-size: 16px;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+}
 /*
 * Product List page
 */
@@ -121,5 +200,29 @@ body{color:black;
 */
 #main_nav{
     background-color: #b300b3;
+}
+/*
+* index page
+*/
+#index{
+    background-image:url('/media/images/slide2.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:550px;
+    margin:-40px -40px 0px -40px;
+    opacity: .8;
+}
+#index h1{
+    text-align:center;
+    color: white;
+    padding-top:100px;
+
+}
+#index h4{
+    text-align:center;
+    color: white;
+    padding:20px 0px;
+    line-height: normal;
+
 }
 

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
     'paypal_store',
     'django_forms_bootstrap',
-
+    'user_account',
 
 ]
 

@@ -1,14 +1,21 @@
 {% extends "products/base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
-    <div class="col-sm-offset-2 col-sm-8 col-sm-offset-2" id="registe_form">
-        <form role="form" method="post" action="{% url 'user_account:register' %}" >
-        <legend>Create a new account</legend>
-        {% csrf_token %}
-        {{ form | as_bootstrap }}
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Create account</button>
-        </div>
-       </form>
+    <div class="container">
+       <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 col-sm-offset-2" id="registe_form">
+               <form role="form" method="post" action="{% url 'user_account:register' %}"  >
+                     <legend>Create a new account</legend>
+                     {% csrf_token %}
+                     {{ form | as_bootstrap }}
+                   <div class="form-group">
+                       <button type="submit" class="btn btn-primary" id="register_button">
+                           <a href="#">Create Account</a>
+                       </button>
+                   </div>
+               </form>
+            </div>
+       </div>
     </div>
+
 {% endblock %}

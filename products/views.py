@@ -19,3 +19,5 @@ def product_detail(request, id, slug):
     return render(request, "products/products_view/product_detail.html",
                   {"product": product})
 
+def index(request):
+    return render(request,"products/index.html")

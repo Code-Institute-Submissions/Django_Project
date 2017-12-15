@@ -10,6 +10,8 @@
     <title>Gift Site</title>
     <!-- Custom styles for this project -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="{% static 'products/css/custom.css' %}" />
   </head>
 <body>
@@ -21,11 +23,11 @@
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Gift</a>
+                <a class="navbar-brand" href="#"><b>Gift</b></a>
             </div>
             <div class="collapse navbar-collapse" id="topNavbar">
                 <ul class="nav navbar-nav navbar-right ">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{% url 'products:index' %}">Home</a></li>
                     <li><a href="{% url 'products:product_list' %}">Choose Your Gift</a></li>
                     <li><a href="{% url 'user_account:register' %}">New User</a></li>
                     <li><a href="{% url 'user_account:login' %}">User LogIn</a></li>
@@ -43,10 +45,20 @@
        {% endblock %}
 
 
-    <footer class="footer" id="footer_color">
-      <div class="container">
-          <h2>footer</h2>
-      </div>
+    <footer class="container-fluid" id="footer_color">
+        <div class="container">
+            <div class="col-sm-offset-4 col-sm-4 col-sm-offset-4" id="footer_icon">
+                <ul>
+                <li><a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" id="facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true" id="twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true" id="google"></i></a></li>
+                <li><a href="#"><i class="fa  fa-instagram fa-2x" aria-hidden="true" id="instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12" >
+                <p id="footer_text">Gift App Made By <a href="#">HureFerdous</a></p>
+            </div>
+        </div>
     </footer>
 </body>
 <!-- script references -->
