@@ -5,6 +5,11 @@ Gift site is developed by __Django__. Django is a high-level Python Web framewor
 
 ## Structure
 The Gift site has one main project is called Gift. __Gift__ project has three Apps called __products__, __user_account__ and __paypal_store__. 
+* __products:__ This app contains all the product categories and products details.
+* __user_account:__ By using this app user can register, login and logout from the site.
+* __paypal_store:__ This app includes all the payments transaction on site.
+* __requriments.txt:__ In this text file all the dependency need for the project.
+
 
 ![structure](https://user-images.githubusercontent.com/24476948/34054674-eaabcdd0-e1c3-11e7-88ac-95328db6db09.png)
 
