@@ -16,7 +16,7 @@ The Gift site has one main project is called Gift. __Gift__ project has three Ap
 
 
 ## Main steps to develop the project
-1.__Create Project__
+1.__Create Project:__
 To start to develop site we need to install python and django in our device by using this comment below:
 ``` 
 python --version
@@ -38,8 +38,18 @@ Then we got those file in Gift project:
 * __wsgi.py__: An entry-point for WSGI-compatible web servers to serve our project. This file handles our requests/responses to/from Django development server.
 * ____init__ __.py__: An empty file that informs Python that this directory should be considered a Python package.
 
-   
-
+ 2.__Create App:__ 
+ To create the app we need to use this comment below:
+ ```
+ django-admin start app products
+ ```
+ ```
+ django-admin start app user_account
+ ```
+ ```
+ django-admin start app paypal_store
+ ```
+After doinig this we need to add thoes apps in our setting.py file
 ## Content
 
 ## Technology stack
