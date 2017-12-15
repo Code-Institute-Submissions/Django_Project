@@ -10,7 +10,20 @@ The Gift site has one main project is called Gift. __Gift__ project has three Ap
 
 
 
-## Main steps to create to this project
+## Main steps to develop the project
+1.__Create Project__
+To start to develop site we need to install python and django in our device by using this comment below:
+``` 
+python --version
+```
+```
+easy_install --version
+```
+```
+easy_install django
+```
+
+   
 
 ## Content
 
