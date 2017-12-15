@@ -55,6 +55,8 @@ After doinig this we need to add thoes apps in our setting.py file
 
 
 ## Content
+1.__products:__
+In our product apps 
 
 ## Technology stack
 
