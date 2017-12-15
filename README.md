@@ -22,6 +22,10 @@ easy_install --version
 ```
 easy_install django
 ```
+Now using django-admin we create our Gift project.
+```
+django-admin startproject Gift
+```
 
    
 
