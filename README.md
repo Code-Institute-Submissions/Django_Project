@@ -50,6 +50,10 @@ Then we got those file in Gift project:
  django-admin start app paypal_store
  ```
 After doinig this we need to add thoes apps in our setting.py file
+
+![sett](https://user-images.githubusercontent.com/24476948/34059391-c6571c2e-e1d6-11e7-99bb-6555d9d2c47c.png)
+
+
 ## Content
 
 ## Technology stack
