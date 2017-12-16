@@ -113,6 +113,11 @@ It contains basic the structure for the hole site and all other pages are shown 
 ```
 2. __index.html:__
 The index page is home page for the site.
+![index](https://user-images.githubusercontent.com/24476948/34073875-e1c6246c-e29b-11e7-925e-c31a62eafc46.png)
+
+3. __product_list.html:__
+All the products and categories are show in this page:
+
 
 
 
