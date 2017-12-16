@@ -16,7 +16,7 @@ The Gift site has one main project is called Gift. __Gift__ project has three Ap
 
 
 ## Main steps to develop the project
-1.__Create Project:__
+1. __Create Project:__
 To start to develop site we need to install python and django in our device by using this comment below:
 ``` 
 python --version
@@ -38,7 +38,7 @@ Then we got those file in Gift project:
 * __wsgi.py__: An entry-point for WSGI-compatible web servers to serve our project. This file handles our requests/responses to/from Django development server.
 * ____init__ __.py__: An empty file that informs Python that this directory should be considered a Python package.
 
- 2.__Create App:__ 
+ 2. __Create App:__ 
  To create the app we need to use this comment below:
  ```
  django-admin start app products
@@ -52,6 +52,12 @@ Then we got those file in Gift project:
 After doinig this we need to add thoes apps in our setting.py file
 
 ![sett](https://user-images.githubusercontent.com/24476948/34059391-c6571c2e-e1d6-11e7-99bb-6555d9d2c47c.png)
+
+3.__Create Super User:__ 
+To manage the admin section we need to create a super user in our site. By using below comment in terminal a super user can create:
+```
+python manage.py createsuperuser
+```
 
 
 ## Content
