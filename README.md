@@ -62,7 +62,20 @@ python manage.py createsuperuser
 
 ## Content
 1.__products:__
-In our product apps 
+The products app is include those file like migrations, static, templates,__init.py__,  admin.py, apps.py, models.py, tests.py, views.py and urls.py.
+
+![product2](https://user-images.githubusercontent.com/24476948/34073338-712453ca-e28f-11e7-99c1-3a9a9579d540.png)
+
+* __models.py:__ First we have to create our database for our products in models.py file. There are two class is created for Product and Category to store in database. Then we apply below comment in terminal:
+```
+python manage.py makemigrations 
+```
+```
+python manage.py migrate
+```
+
+* __admin.py:__ 
+
 
 ## Technology stack
 
