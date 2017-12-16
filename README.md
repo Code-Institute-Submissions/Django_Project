@@ -105,7 +105,25 @@ return render(request, "products/products_view/product_list.html",
  {"products": products,"category":category,"categories":categories})
 ```
 * __templates:__
-The [template](https://docs.djangoproject.com/en/2.0/topics/templates/) layer provides a designer-friendly syntax for rendering the information to be presented to the user. In products templates contains html file like base.html, index.html, product_details.html and product_list.html page.
+The [template](https://docs.djangoproject.com/en/2.0/topics/templates/) layer provides a designer-friendly syntax for rendering the information to be presented to the user. In products templates contains html file like base.html, index.html, product_details.html and product_list.html page. First we have to setup templates in setting.py file like:
+```
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
 1. __base.html:__
 It contains basic the structure for the hole site and all other pages are shown in this page.
 ```
@@ -161,11 +179,11 @@ Bootstrap. Build responsive, mobile-first projects on the web with the world's m
 ## Instructions
 Open your terminal and use the git clone command:
 
-git clone https://github.com/abmist/Project_2.git
+git clone https://github.com/hureferdous/Django_Project.git
 
-Once the project is cloned, enter in project_2 directory:
+Once the project is cloned, enter in Gift directory:
 
-cd project_2
+cd Gift
 
 It's recommended to use a virtual environment (to keep isolated the dependencies required by this project). If you don't have it installed, you can do it using pip pip install virtualenv.
 
@@ -177,20 +195,14 @@ Install the dependencies:
 
 pip install -r requirements.txt
 
-In this project, we've used data that originally were in a CSV file called opendata_projects_clean.csv. Note: Due to the size of the file, it was not possible to upload to GitHub. The file can be downloaded [here.] (http://data.donorschoose.org/open-data/overview/)
-
-The file is uploaded to an instance of MongoDb running locally. In doing so, the content is be converted to JSON format.
-
-To do that, open your terminal and run mongoDB by running the command: mongod
-
-Leave it running as it is and open another terminal window. Then copy the CSV file to the same location as the directory opened in the second terminal window.
-
-Enter the following command:
-
-mongoimport -d donorsUSA -c projects --type csv --file opendata_projects_clean.csv --headerline
-
-It will take a few minutes due to the big amount of records in the file.
-
-If you open Mongo Management Studio you can see the uploaded data (now, in JSON format).
-
-Now you can open up your browser and in the URL bar enter http://127.0.0.1:5000
+To do that, open your terminal and run 
+```
+ python manage.py makemigrations
+```
+```
+ python manage.py migrate
+```
+```
+ python manage.py runserver
+```
+Now you can open up your browser and in the URL bar enter http://127.0.0.1:8000
