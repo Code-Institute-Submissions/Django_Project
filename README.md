@@ -49,7 +49,7 @@ Then we got those file in Gift project:
  ```
  django-admin start app paypal_store
  ```
-After doinig this we need to add thoes apps in our setting.py file
+After doinig this we need to Update the INSTALLED_APPS in your settings.py file:
 
 ![sett](https://user-images.githubusercontent.com/24476948/34059391-c6571c2e-e1d6-11e7-99bb-6555d9d2c47c.png)
 
@@ -75,6 +75,18 @@ python manage.py migrate
 ```
 
 * __admin.py:__ 
+To get the all Product and Category in our admin site we need to add this in admin.py:
+```
+from django.contrib import admin
+from .models import Category, Product
+```
+```
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Product, ProductAdmin)
+```
+* __urls.py:__
+The url tag helps us to generate links in the templates.At this point urls.py file in products app looks like this:
+
 
 
 ## Technology stack
