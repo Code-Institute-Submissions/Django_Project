@@ -123,9 +123,13 @@ All the products and categories are show in this page:
 Every product details is shown when we click on More About Product button on product list page.
 ![prduct_detail](https://user-images.githubusercontent.com/24476948/34073942-4718382c-e29d-11e7-9b26-0e3bb0042c54.png)
 
-
-
-
+5. __static:__
+It contains the css file and javascript file needed for the site. First we need to setup the static file in setting.py
+```
+STATIC_URL = '/static/'
+STARICFILES_DIRS = (os.path.join(BASE_DIR, 'products/static'))
+```
+* __custom.css__: It has all custom  css code for the site. 
 
 ## Technology stack
 
