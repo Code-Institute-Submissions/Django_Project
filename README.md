@@ -61,7 +61,7 @@ python manage.py createsuperuser
 
 
 ## Content
-1.__products:__
+1.__products App:__
 The products app is include those file like migrations, static, templates,__init.py__,  admin.py, apps.py, models.py, tests.py, views.py and urls.py.
 
 ![product2](https://user-images.githubusercontent.com/24476948/34073338-712453ca-e28f-11e7-99c1-3a9a9579d540.png)
@@ -103,6 +103,18 @@ To combines a given template with a given context dictionary and returns an Http
 return render(request, "products/products_view/product_list.html",
  {"products": products,"category":category,"categories":categories})
 ```
+* __templates:__
+The [template](https://docs.djangoproject.com/en/2.0/topics/templates/) layer provides a designer-friendly syntax for rendering the information to be presented to the user. In products templates contains html file like base.html, index.html, product_details.html and product_list.html page.
+1. __base.html:__
+It contains basic the structure for the hole site and all other pages are shown in this page.
+```
+ {% block content %}
+       {% endblock %}
+```
+2. __index.html:__
+The index page is home page for the site.
+
+
 
 ## Technology stack
 
