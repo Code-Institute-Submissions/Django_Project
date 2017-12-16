@@ -117,6 +117,11 @@ The index page is home page for the site.
 
 3. __product_list.html:__
 All the products and categories are show in this page:
+![product_list](https://user-images.githubusercontent.com/24476948/34073913-9c688788-e29c-11e7-9ee6-6d50dfe704fc.png)
+
+4. __product_details.html:__
+Every product details is shown when we click on More About Product button on product list page.
+
 
 
 
