@@ -87,7 +87,22 @@ admin.site.register(Product, ProductAdmin)
 * __urls.py:__
 The url tag helps us to generate links in the templates.At this point urls.py file in products app looks like this:
 
+![urls1](https://user-images.githubusercontent.com/24476948/34073548-f7393008-e293-11e7-81b3-81862c02b3c6.png)
 
+* __views.py:__
+Django has the concept of views to encapsulate the logic responsible for processing a user’s request and for returning the response.Add a view function to views.py is connect to our urls.py and show the html pages from the templates.
+```
+from django.shortcuts import render, get_object_or_404
+from .models import Product, Category
+
+```
+* __get_object_or_404()__ This pattern is so common that [Django](https://www.djangoproject.com/start/overview/) a provides a shortcurt method called [get_object_or_404()](https://overiq.com/django/1.10/showing-404-errors-in-django). To use get_object_or_404() method with models, queryset and managers. It also shows that when a matching record is not found, get_object_or_404() raises Http404 exception.
+* __render()__
+To combines a given template with a given context dictionary and returns an HttpResponse object with that rendered text.Django does not provide a shortcut function which returns a TemplateResponse because the constructor of TemplateResponse offers the same level of convenience as [render()](https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/).
+```
+return render(request, "products/products_view/product_list.html",
+ {"products": products,"category":category,"categories":categories})
+```
 
 ## Technology stack
 
