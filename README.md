@@ -159,3 +159,38 @@ Bootstrap. Build responsive, mobile-first projects on the web with the world's m
 
 
 ## Instructions
+Open your terminal and use the git clone command:
+
+git clone https://github.com/abmist/Project_2.git
+
+Once the project is cloned, enter in project_2 directory:
+
+cd project_2
+
+It's recommended to use a virtual environment (to keep isolated the dependencies required by this project). If you don't have it installed, you can do it using pip pip install virtualenv.
+
+Here you have the instructions: [Virtual Environment - The Hitchhiker's Guide to Python] (http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+
+Create a virtual environment for this project and activate it.
+
+Install the dependencies:
+
+pip install -r requirements.txt
+
+In this project, we've used data that originally were in a CSV file called opendata_projects_clean.csv. Note: Due to the size of the file, it was not possible to upload to GitHub. The file can be downloaded [here.] (http://data.donorschoose.org/open-data/overview/)
+
+The file is uploaded to an instance of MongoDb running locally. In doing so, the content is be converted to JSON format.
+
+To do that, open your terminal and run mongoDB by running the command: mongod
+
+Leave it running as it is and open another terminal window. Then copy the CSV file to the same location as the directory opened in the second terminal window.
+
+Enter the following command:
+
+mongoimport -d donorsUSA -c projects --type csv --file opendata_projects_clean.csv --headerline
+
+It will take a few minutes due to the big amount of records in the file.
+
+If you open Mongo Management Studio you can see the uploaded data (now, in JSON format).
+
+Now you can open up your browser and in the URL bar enter http://127.0.0.1:5000
