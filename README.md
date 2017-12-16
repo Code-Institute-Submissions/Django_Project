@@ -8,6 +8,7 @@ The Gift site has one main project is called Gift. __Gift__ project has three Ap
 * __products:__ This app contains all the product categories and products details.
 * __user_account:__ By using this app user can register, login and logout from the site.
 * __paypal_store:__ This app includes all the payments transaction on site.
+* __media:__ This includes all images and video file needed for the site.
 * __requriments.txt:__ In this text file all the dependency need for the project.
 
 
@@ -66,7 +67,7 @@ The products app is include those file like migrations, static, templates,__init
 
 ![product2](https://user-images.githubusercontent.com/24476948/34073338-712453ca-e28f-11e7-99c1-3a9a9579d540.png)
 
-* __models.py:__ First we have to create our database for our products in models.py file. There are two class is created for Product and Category to store in database. Then we apply below comment in terminal:
+* __models.py:__ A model is the single, definitive source of information about your data. It contains the essential fields and behaviors of the data storing. Each model maps to a single database table. There are two class is created for Product and Category to store in database. Then we apply below comment in terminal:
 ```
 python manage.py makemigrations 
 ```
@@ -132,5 +133,29 @@ STARICFILES_DIRS = (os.path.join(BASE_DIR, 'products/static'))
 * __custom.css__: It has all custom  css code for the site. 
 
 ## Technology stack
+1. __Django:__
+[Django](https://www.djangoproject.com/start/overview/) takes care of much of the hassle of Web development.  Django takes care of user authentication, content administration, site maps, RSS feeds, and many more tasks. This site develop by those django task given below
+   * __[Django Models](https://docs.djangoproject.com/en/2.0/topics/db/models/):__
+   Each model is a Python class that subclasses __django.db.models.Model__. Each attribute of the model represents a database field. With all of this, Django gives you an automatically-generated database-access API.
+   * __[Django Views](https://docs.djangoproject.com/en/2.0/topics/http/views/):__
+   A view function, or view for short, is simply a Python function that takes a Web request and returns a Web response. This response can be the HTML contents of a Web page, or a redirect, or a 404 error, or an XML document, or an image or anything. The view itself contains whatever arbitrary logic is necessary to return that response.
+   * __[Templates](https://docs.djangoproject.com/en/2.0/topics/templates/):__
+   The Django template language is Django’s own template system. Until Django 1.8 it was the only built-in option available.
+   * __[Django Admin](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/):__
+   One of the most powerful parts of Django is the automatic admin interface. It reads metadata from your models to provide a quick, model-centric interface where trusted users can manage content on your site. The admin’s recommended use is limited to an organization’s internal management tool. It’s not intended for building your entire front end around.
+   * __[Django Form](https://docs.djangoproject.com/en/2.0/topics/forms/)__
+   Django handles three distinct parts of the work involved in forms. It preparing and restructuring data to make it ready for rendering, creating HTML forms for the data and receiving and processing submitted forms and data from the client.
+   * __[Django User authentication ](https://docs.djangoproject.com/en/2.0/topics/auth/):___
+   Django comes with a user authentication system. It handles user accounts, groups, permissions and cookie-based user sessions. Django authentication system handles both authentication and authorization.
+   
+2. __[Python](https://www.python.org/):__
+Python is a widely used high-level programming language for general-purpose programming.Python interpreters are available for many operating systems.
+3. __[Paypal]( http://developer.paypal.com):__
+PayPal offers safe and secure payments, without the need for special security methods on the developer’s part or the website hosting platform, to ensure that the customer’s details are safe.
+4. __[Bootstrap](https://getbootstrap.com/):__
+Bootstrap. Build responsive, mobile-first projects on the web with the world's most popular front-end component library. Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. 
+5. __HTML:__
+6. __CSS:__
+
 
 ## Instructions
