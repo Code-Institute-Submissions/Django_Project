@@ -121,6 +121,7 @@ All the products and categories are show in this page:
 
 4. __product_details.html:__
 Every product details is shown when we click on More About Product button on product list page.
+![prduct_detail](https://user-images.githubusercontent.com/24476948/34073942-4718382c-e29d-11e7-9b26-0e3bb0042c54.png)
 
 
 
