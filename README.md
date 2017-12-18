@@ -206,7 +206,11 @@ AUTHENTICATION_BACKENDS = (
 ```
 Here we’ve created a class that will replace the standard ‘auth’ object that Django uses to check logins, and we override two of its default methods. The authenticate method is where we are doing the main logic by finding the user by the email address and then checking password.
 * __urls.py:__
+we have been hardcoding URLs in our templates.If we want to update the URL structure we have manually visit each and every templates to update the URL. This problem can be solved easily by using url tag in our templates. user_account urls.py include those
+
+![urls2](https://user-images.githubusercontent.com/24476948/34129606-9de3aa74-e43c-11e7-962c-ee9f9166a7a2.png)
 * __templates:__
+user_account app templates contains register.thml, login.html and profile.html file.
 1. __register.html:__
 By using New User page any one can register on this site.
 
