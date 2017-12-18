@@ -185,8 +185,12 @@ User_account app include thoes files migrations,templates,__init.py__, admin.py,
 * __templates:__
 1. __register.html:__
 By using New User page any one can register on this site.
-2. __profile.html:__
-3. __login.html:__
+
+![new_user](https://user-images.githubusercontent.com/24476948/34109457-8b99c1e6-e3fb-11e7-9053-0999f080ac0e.png)
+
+2. __login.html:__
+User can login in ths site by using this page:
+
 
 ## Technology stack
 1. __Django:__
