@@ -176,11 +176,35 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',    
 ]
 ```
+We also need to add this our setting.py file:
+```
+AUTH_USER_MODEL = 'user_account.User'
+```
 To use authentication system you must have 'django.contrib.auth' and 'django.contrib.contenttype' in the INSTALLED_APPS list as follows:
 User_account app include thoes files migrations,templates,__init.py__, admin.py, apps.py, models.py, tests.py, views.py,forms.py, backends.py and urls.py.
+* __models.py:__
+The User model is considered as heart of Django authentication. To use User model you must first import it from django.contrib.auth.models.
+```
+from django.contrib.auth.models import AbstractUser, UserManager
+```
 * __views.py:__
+In user_account app views are developed for the register, login, logout and profile.
 * __forms.py:__
+The syntax of creating forms in Django is almost similar to that of creating models, the only differences are Django form inherits from __forms.Form__ instead of __models.Model__. and each form fields inherits __forms.FieldName__ instead of __models.FieldName__. The user_account has registration form and login form:
+```
+class UserRegistrationForm(UserCreationForm)
+class UserLoginForm(forms.Form)
+```
 * __backends.py:__
+we need to modify our settings.py so that Django knows to use this backend instead of the system default
+```
+AUTHENTICATION_BACKENDS = (
+   'django.contrib.auth.backends.ModelBackend',
+    'user_account.backends.EmailAuth',
+)
+
+```
+Here we’ve created a class that will replace the standard ‘auth’ object that Django uses to check logins, and we override two of its default methods. The authenticate method is where we are doing the main logic by finding the user by the email address and then checking password.
 * __urls.py:__
 * __templates:__
 1. __register.html:__
