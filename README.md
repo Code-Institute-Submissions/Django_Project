@@ -37,7 +37,7 @@ Then we got those file in Gift project:
 * __settings.py__: This is the settings file for your project, where you define your project’s configuration settings, including database connections, other applications, templates, and more.
 * __urls.py__: The url declarations for this Django project. This file contains a list of mappings which connect urls to views.
 * __wsgi.py__: An entry-point for WSGI-compatible web servers to serve our project. This file handles our requests/responses to/from Django development server.
-* ____init__ __.py__: An empty file that informs Python that this directory should be considered a Python package.
+* __init.py__: An empty file that informs Python that this directory should be considered a Python package.
 
  2. __Create App:__ 
  To create the app we need to use this comment below:
@@ -62,8 +62,8 @@ python manage.py createsuperuser
 
 
 ## Content
-1.__products App:__
-The products app is include those file like migrations, static, templates,__init.py__,  admin.py, apps.py, models.py, tests.py, views.py and urls.py.
+### 1)products App
+All the products for the site is developed in products app. The products app is include those file like migrations, static, templates,__init.py__,  admin.py, apps.py, models.py, tests.py, views.py and urls.py.
 
 ![product2](https://user-images.githubusercontent.com/24476948/34073338-712453ca-e28f-11e7-99c1-3a9a9579d540.png)
 
@@ -149,6 +149,44 @@ STATIC_URL = '/static/'
 STARICFILES_DIRS = (os.path.join(BASE_DIR, 'products/static'))
 ```
 * __custom.css__: It has all custom  css code for the site. 
+
+### 2)user_account app:
+User can easily to create an account in this Gift site.Django has an authentication framework which allows user's to login into the the application easily. User_account app is to develop for user registration, login and logout in the Gift site.The authentication framework is implemented as 'django.contrib.auth' app but it is also depends upon on 'django.contrib.contenttype' app and some middlewares.
+```
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'products',
+    'paypal.standard.ipn',
+    'paypal_store',
+    'django_forms_bootstrap',
+    'user_account',
+
+]
+```
+Django authentication also uses session behind the scenes. As a result, you must have the following two middlewares in the MIDDLEWARE list in settings.py.
+```
+
+MIDDLEWARE = [
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',    
+]
+```
+To use authentication system you must have 'django.contrib.auth' and 'django.contrib.contenttype' in the INSTALLED_APPS list as follows:
+User_account app include thoes files migrations,templates,__init.py__, admin.py, apps.py, models.py, tests.py, views.py,forms.py, backends.py and urls.py.
+* __views.py:__
+* __forms.py:__
+* __backends.py:__
+* __urls.py:__
+* __templates:__
+1. __register.html:__
+By using New User page any one can register on this site.
+2. __profile.html:__
+3. __login.html:__
 
 ## Technology stack
 1. __Django:__
