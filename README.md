@@ -186,10 +186,13 @@ User_account app include thoes files migrations,templates,__init.py__, admin.py,
 1. __register.html:__
 By using New User page any one can register on this site.
 
-![new_user](https://user-images.githubusercontent.com/24476948/34109457-8b99c1e6-e3fb-11e7-9053-0999f080ac0e.png)
+![register](https://user-images.githubusercontent.com/24476948/34109691-4d6e56f6-e3fc-11e7-8cec-ce7837e69ea3.png)
 
 2. __login.html:__
 User can login in ths site by using this page:
+
+![log_in](https://user-images.githubusercontent.com/24476948/34109680-48dab3a0-e3fc-11e7-9c67-504d10fd924f.png)
+
 
 
 ## Technology stack
